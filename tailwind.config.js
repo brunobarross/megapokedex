@@ -15,6 +15,7 @@ module.exports = {
         subtitle: ' #8E8787',
         primary: '#FFCB05',
         secondary: '#3B5CA8',
+        fire: '#A8A77A',
       },
     },
   },
