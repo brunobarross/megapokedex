@@ -1,0 +1,39 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import './components/card_pokemon.css';
+@import 'tailwindcss/utilities';
+
+.pokemon-wrapper {
+  @apply grid grid-cols-6 gap-8 justify-center py-10;
+}
+
+@layer components {
+  .card-pokemon {
+    @apply rounded-lg bg-white px-4 py-4;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+    .sprite {
+      @apply flex justify-center mb-4;
+    }
+    h3 {
+      @apply text-lg font-semibold leading-7 capitalize;
+    }
+    p {
+      @apply font-medium text-subtitle text-sm leading-5 mt-2;
+    }
+    .types {
+      @apply flex mt-2;
+      .badge {
+        @apply h-5 bg-primary flex items-center justify-center text-[.75rem] py-2 px-4 rounded-lg capitalize;
+        & + .badge {
+          @apply ml-2;
+        }
+      }
+    }
+    .btn-container {
+      @apply mt-4;
+      button {
+        @apply bg-primary flex items-center justify-center w-full h-8 px-4 py-2 rounded-lg;
+      }
+    }
+  }
+}
